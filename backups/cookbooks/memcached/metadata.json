@@ -1,0 +1,35 @@
+{
+  "name": "memcached",
+  "description": "Installs Memcached",
+  "long_description": "",
+  "maintainer": "AWS OpsWorks",
+  "maintainer_email": "",
+  "license": "Apache 2.0",
+  "platforms": {
+
+  },
+  "dependencies": {
+    "opsworks_agent_monit": ">= 0.0.0"
+  },
+  "providing": {
+
+  },
+  "recipes": {
+    "memcached::server": "Memcached server",
+    "memcached::ruby": "Memcached Ruby client libraries",
+    "memcached::php": "Memcached PHP client libraries"
+  },
+  "version": "1.0.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

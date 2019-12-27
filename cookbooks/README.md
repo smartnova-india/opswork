@@ -1,66 +1,40 @@
-This directory contains the cookbooks used to configure systems in your infrastructure with Chef - an example basic cookbook called `example` has been automatically created for you.
+opsworks-cookbooks
+==================
 
-Knife needs to be configured to know where the cookbooks are located with the `cookbook_path` setting. If this is not set, then several cookbook operations will fail to work properly.
+**This repo contains cookbooks used by AWS OpsWorks for Chef versions 11.10, 11.4 and 0.9.**
 
-```
-cookbook_path ["./cookbooks"]
-```
+To get started with AWS OpsWorks cookbooks for all versions of Chef see the [cookbook documentation](https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html).
 
-This setting tells knife to look for the cookbooks directory in the present working directory. This means the knife cookbook subcommands need to be run in the `chef-repo` directory itself. To make sure that the cookbooks can be found elsewhere inside the repository, use an absolute path. This is a Ruby file, so something like the following can be used:
+If you want to override any template (like the Rails database.yml or the Apache
+vhost definition), this is the place to look for the originals.
 
-```
-current_dir = File.dirname(__FILE__)
-cookbook_path ["#{current_dir}/../cookbooks"]
-```
+Do not reuse built-in cookbook names for custom or community cookbooks. Custom
+cookbooks that have the same name as built-in cookbooks might fail.
 
-Which will set `current_dir` to the location of the config.rb (previously knife.rb) file itself (e.g. `~/chef-repo/.chef/config.rb`).
+Chef version 12
+------------------------------------
 
-Configure knife to use your preferred copyright holder, email contact and license. Add the following lines to `.chef/config.rb`.
+**For Chef 12.2 Windows and Chef 12 Linux there are no built-in cookbooks**
 
-```
-cookbook_copyright "Example, Com."
-cookbook_email     "cookbooks@example.com"
-cookbook_license   "apachev2"
-```
+Chef versions 11.10, 11.4 and 0.9
+----------------------------------
 
-Supported values for `cookbook_license` are "apachev2", "mit","gplv2","gplv3", or "none". These settings are used to prefill comments in the default recipe, and the corresponding values in the metadata.rb. You are free to change the the comments in those files.
+These branches contain the cookbooks that are used by official OpsWorks releases:
 
-Create new cookbooks in this directory with Chef.
+- **Chef 11.10**: [release-chef-11.10](https://github.com/aws/opsworks-cookbooks/tree/release-chef-11.10)
+- **Chef 11.4**: [release-chef-11.4](https://github.com/aws/opsworks-cookbooks/tree/release-chef-11.4) (deprecated)
+- **Chef 0.9**: [release-chef-0.9](https://github.com/aws/opsworks-cookbooks/tree/release-chef-0.9) (deprecated)
 
-```
-chef generate cookbook COOKBOOK
-```
+These branches reflect the upcoming changes for the next release:
 
-This will create all the cookbook directory components. You don't need to use them all, and can delete the ones you don't need. It also creates a README file, metadata.rb and default recipe.
+- **Chef 11.10**: [master-chef-11.10](https://github.com/aws/opsworks-cookbooks/tree/master-chef-11.10)
+- **Chef 11.4**: [master-chef-11.4](https://github.com/aws/opsworks-cookbooks/tree/master-chef-11.4) (deprecated)
+- **Chef 0.9**: [master-chef-0.9](https://github.com/aws/opsworks-cookbooks/tree/master-chef-0.9) (deprecated)
 
-You can also download cookbooks directly from the Chef Supermarket site. There are two subcommands to help with this depending on what your preference is.
+The `master` branch is not used since AWS OpsWorks supports multiple configuration managers.
 
-The first and recommended method is to use a vendor branch if you're using Git. This is automatically handled with Knife.
+See also <https://aws.amazon.com/opsworks/>
 
-```
-knife cookbook site install COOKBOOK
-```
-
-This will:
-
-- Download the cookbook tarball from the Chef Supermarket.
-- Ensure its on the git master branch.
-- Checks for an existing vendor branch, and creates if it doesn't.
-- Checks out the vendor branch (chef-vendor-COOKBOOK).
-- Removes the existing (old) version.
-- Untars the cookbook tarball it downloaded in the first step.
-- Adds the cookbook files to the git index and commits.
-- Creates a tag for the version downloaded.
-- Checks out the master branch again.
-- Merges the cookbook into master.
-- Repeats the above for all the cookbooks dependencies, downloading them from the community site
-
-The last step will ensure that any local changes or modifications you have made to the cookbook are preserved, so you can keep your changes through upstream updates.
-
-If you're not using Git, use the site download subcommand to download the tarball.
-
-```
-knife cookbook site download COOKBOOK
-```
-
-This creates the COOKBOOK.tar.gz from in the current directory (e.g., `~/chef-repo`). We recommend following a workflow similar to the above for your version control tool.
+LICENSE: Unless otherwise stated, cookbooks/recipes originated by Amazon Web Services are licensed
+under the [Apache 2.0 license](http://aws.amazon.com/apache2.0/). See the LICENSE file. Some files
+are just imported and authored by others. Their license will of course apply.

@@ -1,0 +1,35 @@
+{
+  "name": "rails",
+  "description": "Installs Rails",
+  "long_description": "",
+  "maintainer": "AWS OpsWorks",
+  "maintainer_email": "",
+  "license": "Apache 2.0",
+  "platforms": {
+
+  },
+  "dependencies": {
+    "apache2": ">= 0.0.0",
+    "deploy": ">= 0.0.0",
+    "nginx": ">= 0.0.0"
+  },
+  "providing": {
+
+  },
+  "recipes": {
+    "rails::configure": "Re-configure a Rails application"
+  },
+  "version": "1.0.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

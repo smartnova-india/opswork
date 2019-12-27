@@ -1,0 +1,33 @@
+{
+  "name": "opsworks_cleanup",
+  "description": "Cleans up Chef run",
+  "long_description": "",
+  "maintainer": "AWS OpsWorks",
+  "maintainer_email": "",
+  "license": "Apache 2.0",
+  "platforms": {
+
+  },
+  "dependencies": {
+    "opsworks_initial_setup": ">= 0.0.0"
+  },
+  "providing": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "1.0.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

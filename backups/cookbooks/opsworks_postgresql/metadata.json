@@ -1,0 +1,33 @@
+{
+  "name": "opsworks_postgresql",
+  "description": "Installs and configures the Postgresql client",
+  "long_description": "",
+  "maintainer": "AWS OpsWorks",
+  "maintainer_email": "",
+  "license": "Apache 2.0",
+  "platforms": {
+
+  },
+  "dependencies": {
+
+  },
+  "providing": {
+
+  },
+  "recipes": {
+    "postgresql::client_install": "Installs the Postgresql client"
+  },
+  "version": "1.0.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

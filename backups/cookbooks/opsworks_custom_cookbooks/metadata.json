@@ -1,0 +1,40 @@
+{
+  "name": "opsworks_custom_cookbooks",
+  "description": "Supports custom user cookbooks",
+  "long_description": "",
+  "maintainer": "AWS OpsWorks",
+  "maintainer_email": "",
+  "license": "Apache 2.0",
+  "platforms": {
+
+  },
+  "dependencies": {
+    "scm_helper": ">= 0.0.0",
+    "opsworks_initial_setup": ">= 0.0.0",
+    "opsworks_commons": ">= 0.0.0",
+    "opsworks_berkshelf": ">= 0.0.0"
+  },
+  "providing": {
+
+  },
+  "recipes": {
+    "opsworks_custom_cookbooks::checkout": "Checkout custom Cookbooks",
+    "opsworks_custom_cookbooks::load": "Load custom Cookbooks",
+    "opsworks_custom_cookbooks::execute": "Execute custom Cookbooks",
+    "opsworks_custom_cookbooks::update": "Update custom Cookbooks",
+    "opsworks_custom_cookbooks::berkshelf": "Berkshelf Cookbooks management"
+  },
+  "version": "1.0.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}
