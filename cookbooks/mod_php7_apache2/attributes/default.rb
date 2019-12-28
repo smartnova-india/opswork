@@ -19,22 +19,27 @@ packages = []
 case node[:platform_family]
 when 'debian'
   packages = [
-    "php7-xsl",
-    "php7-curl",
-    "php7-xmlrpc",
-    "php7-sqlite",
-    "php7-dev",
-    "php7-gd",
-    "php7-cli",
-    "php7-sasl",
-    "php7-mcrypt",
-    "php7-memcache",
-    "php-pear",
-    "php-xml-parser",
-    "php-mail-mime",
-    "php-db",
-    "php-mdb2",
-    "php-html-common"
+
+    "php7.2",
+    "php7.2-common",
+    "php7.2-opcache",
+    "php7.2-cli",
+    "php7.2-gd",
+    "php7.2-curl",
+    "php7.2-mysql",
+    "php7.2-xml",
+    "php7.2-xmlrpc",
+    "php7.2-dev",
+    "php7.2-imap",
+    "php7.2-mbstring",
+    "php7.2-opcache",
+    "php7.2-soap",
+    "php7.2-zip",
+    "php7.2-intl",
+    "libapache2-mod-php7.2"
+
+
+    
   ]
 when 'rhel'
   packages = [

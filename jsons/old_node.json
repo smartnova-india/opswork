@@ -1,0 +1,482 @@
+{
+    "ssh_users":
+    {},
+    "opsworks":
+    {
+        "agent_version": "3421-20150611173115",
+        "activity": "configure",
+        "valid_client_activities": [
+            "reboot",
+            "stop",
+            "deploy",
+            "grant_remote_access",
+            "revoke_remote_access",
+            "update_agent",
+            "setup",
+            "configure",
+            "update_dependencies",
+            "install_dependencies",
+            "update_custom_cookbooks",
+            "execute_recipes",
+            "sync_remote_users"
+        ],
+        "sent_at": 1577342004,
+        "deployment": null,
+        "layers":
+        {
+            "php-app":
+            {
+                "name": "PHP App Server",
+                "id": "af66b157-8337-4b4f-9313-6ca4bd42e7a5",
+                "elb-load-balancers": [
+
+                ],
+                "cloud_watch_logs_configuration":
+                {
+                    "enabled": false,
+                    "log_streams": [
+                    {
+                        "file": "/var/lib/aws/opsworks/chef/*.log",
+                        "log_group_name": "RANDStaging/php-app/opsworks-command-log"
+                    }]
+                },
+                "instances":
+                {
+                    "perlucidus":
+                    {
+                        "public_dns_name": "ec2-18-233-76-151.compute-1.amazonaws.com",
+                        "private_dns_name": "ip-172-31-46-117.ec2.internal",
+                        "backends": 2,
+                        "ip": "18.233.76.151",
+                        "private_ip": "172.31.46.117",
+                        "instance_type": "t2.micro",
+                        "status": "online",
+                        "id": "8b576d28-3516-4172-952e-9078582fb6b4",
+                        "aws_instance_id": "i-000972d51c2d5122d",
+                        "elastic_ip": "18.233.76.151",
+                        "created_at": "2018-01-06T04:19:13+00:00",
+                        "booted_at": "2019-12-26T06:29:14+00:00",
+                        "region": "us-east-1",
+                        "availability_zone": "us-east-1a",
+                        "infrastructure_class": "ec2"
+                    }
+                }
+            },
+            "sidetasks":
+            {
+                "name": "SideTasks",
+                "id": "7a8f9c7a-4c84-41c2-9b55-d3d7dde6e2c1",
+                "elb-load-balancers": [
+
+                ],
+                "cloud_watch_logs_configuration":
+                {},
+                "instances":
+                {}
+            }
+        },
+        "applications": [
+        {
+            "name": "RAND",
+            "slug_name": "rand",
+            "application_type": "php"
+        },
+        {
+            "name": "Pension Tracker",
+            "slug_name": "pension_tracker",
+            "application_type": "php"
+        },
+        {
+            "name": "Municipal Debt",
+            "slug_name": "municipal_debt",
+            "application_type": "php"
+        },
+        {
+            "name": "US PT",
+            "slug_name": "us_pt",
+            "application_type": "php"
+        },
+        {
+            "name": "PF Demo",
+            "slug_name": "pf_demo",
+            "application_type": "php"
+        },
+        {
+            "name": "Pension Tracker Texas",
+            "slug_name": "pension_tracker_texas",
+            "application_type": "php"
+        }],
+        "stack":
+        {
+            "name": "RAND Staging",
+            "id": "8c3260b1-77d6-46e8-92af-4a85621d48a0",
+            "vpc_id": "vpc-92f247f7",
+            "elb-load-balancers": [
+
+            ],
+            "rds_instances": [
+
+            ]
+        },
+        "instance":
+        {
+            "id": "8b576d28-3516-4172-952e-9078582fb6b4",
+            "hostname": "perlucidus",
+            "instance_type": "t2.micro",
+            "public_dns_name": "ec2-18-233-76-151.compute-1.amazonaws.com",
+            "private_dns_name": "ip-172-31-46-117.ec2.internal",
+            "ip": "18.233.76.151",
+            "private_ip": "172.31.46.117",
+            "architecture": "x86_64",
+            "layers": [
+                "php-app"
+            ],
+            "backends": 2,
+            "aws_instance_id": "i-000972d51c2d5122d",
+            "region": "us-east-1",
+            "availability_zone": "us-east-1a",
+            "subnet_id": "subnet-c78e9aef",
+            "infrastructure_class": "ec2"
+        },
+        "ruby_version": "2.0.0",
+        "ruby_stack": "ruby",
+        "rails_stack":
+        {
+            "name": null
+        }
+    },
+    "deploy":
+    {
+        "rand":
+        {
+            "application": "rand",
+            "application_type": "php",
+            "environment":
+            {},
+            "environment_variables":
+            {},
+            "auto_bundle_on_deploy": true,
+            "deploy_to": "/srv/www/rand",
+            "deploying_user": null,
+            "document_root": null,
+            "domains": [
+                "qa.randstatestats.org",
+                "rand"
+            ],
+            "migrate": false,
+            "mounted_at": null,
+            "rails_env": null,
+            "restart_command": "echo 'restarting app'",
+            "sleep_before_restart": 0,
+            "ssl_support": false,
+            "ssl_certificate": null,
+            "ssl_certificate_key": null,
+            "ssl_certificate_ca": null,
+            "scm":
+            {
+                "scm_type": "git",
+                "repository": "git@bitbucket.org:josephnation/rand.git",
+                "revision": "staging",
+                "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA6Aiot+GkvIrpXgJJBJXz3si9FEJHzjv+5Njz/4jKOzgst7RD\nTdT1PLOZoB5qCW67T5x+FCK0JGp0Xf16yC5X47ZwvFrEhIjVm7L3bt0LqEyf8t0r\n56pVbQfEQWnU7uHGkkie2MKHZyWsRIvugYLl7/FBCYgGPCgaE8/acPT34iZDfk/j\n3946C9ktHnKxNvoQCopYG2u5FcWBFFN6FYlQNrq+jaWRV6HxUftearsn0D9TFPVh\nRsudEZ3SThVXAOjXhIFToPAq0CPvQHPAkjQ6E08lNHq7QbcwZ9N3k05ki59JSGl9\nyo/ZmF0d02IaBzybNlsF6vVExxR4+X5Lh2QsgQIDAQABAoIBAQDNPiuPS4aeR/mY\n8EiKR+HJZKLrcp11bVhQMR/THrpTm6LidA88n2y1XuA64+xDn7EMAI79XJ0fwRJh\nuT+MJoITqGMcGOXPngHkkW+QnvIa0nyBJOYbK24Y3U/Z1LVHAGrXJmlrrtZ6hLZW\ng7ha0uB1V1+CANITEB3Q/IBqfiVt4V95w1QtlsjDhs628IqjEVz6mC/0sjTKiNCO\nYQ6ta6CewiqkV+QZglE7u/7MkmNMDd4KVqEo6cqUEIkkKH6exUJvkahP1Z1o/uiY\n2Tjj6REnm0R+qddWo3Q+cpB2Jmbx+iwPiCz7VObUtsgcOPknoHnnoaAa4BgdG7aH\n4huynZppAoGBAPjxdIDygmtxcy7BSWqXlalAyam3oXffhQYKKxFFfxAVBtWIl+h3\nvzT4H3JhQgVUf01jBfH+dixisgImw1DxHnObfaJPgvQV78yYP7itb9rfxb7M9X/d\nduhuFKab4BaTjjRvYyuqeKeEa/tOvFt2+Y3eKPj1wF61ohmAfV/uz//bAoGBAO6c\nfsOORHQJbef5u2xkATmcn8CkV/OFYYIQluCZ3v/Qb0T10McVSrjlvMBA5gbjyahf\npKVvPDV9poT/axhAFdjM1KKtNe/I6GSCuq2de6Jm9ujR/ZZ3d2PQoMz0HXD8oMWH\nCOXEDR4Oniu3gczedGG8OwZ2yESF0eu4YVxGAFHTAoGAK1wrFbanvr0g+djSx80l\nVTiip3wDlNSK3/VvcO+w5QU0jobfJq+Mz1YUbCDClhkUn08LHw5aWPrL1JIZ3QRS\ncIJ5zIaa4ZbckL9IAgu7et0VHVmnvSC+8FcUI7zsuCH1V+660EU+BLeM81XQewHr\nD6nNayeq3RQ36sc1jzsSYZcCgYAy4Y4qdzDjqYsVN2ye/WhBd8OdGa5jkGKtkIoL\n1OP3muPPSbe+bCzl5p9sQ6qJd5Nt4w9B88lcArI6lBirMCc4dt0030isHCRqInJa\nSUWu6NPn67dumYUM9NUFP1zz1fsWg+gCzt6ZNTbHTbdRD3Kz0KaphzTHX93WrRed\nzJOO3wKBgQDHdlxjgCU7/TZxhfIL8Slyd4IdqZuM4DXEGkmROJzjmmOPv/tyOV3j\nn4d67go/PJSF/OYWmwYpiyYy3ksYtzhTUe6V2f5Q90RfzxcfBEE/ZW+q1LMO9NDE\nv6OXBY1k5Ckw6Oiz/wZdbW4d9/TLzl7//mtAmwEthfkL1lxvIvqb3A==\n-----END RSA PRIVATE KEY-----",
+                "user": "rajesh",
+                "password": "saviance"
+            },
+            "symlink_before_migrate":
+            {
+                "config/opsworks.php": "opsworks.php"
+            },
+            "symlinks":
+            {},
+            "database":
+            {},
+            "memcached":
+            {
+                "host": null,
+                "port": 11211
+            }
+        },
+        "pension_tracker":
+        {
+            "application": "pension_tracker",
+            "application_type": "php",
+            "environment":
+            {},
+            "environment_variables":
+            {},
+            "auto_bundle_on_deploy": true,
+            "deploy_to": "/srv/www/pension_tracker",
+            "deploying_user": null,
+            "document_root": null,
+            "domains": [
+                "qa.pensiontracker.org",
+                "pension_tracker"
+            ],
+            "migrate": false,
+            "mounted_at": null,
+            "rails_env": null,
+            "restart_command": "echo 'restarting app'",
+            "sleep_before_restart": 0,
+            "ssl_support": false,
+            "ssl_certificate": null,
+            "ssl_certificate_key": null,
+            "ssl_certificate_ca": null,
+            "scm":
+            {
+                "scm_type": "git",
+                "repository": "josephnation@bitbucket.org:joe-team/pension-tracker.git",
+                "revision": "staging",
+                "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA6Aiot+GkvIrpXgJJBJXz3si9FEJHzjv+5Njz/4jKOzgst7RD\nTdT1PLOZoB5qCW67T5x+FCK0JGp0Xf16yC5X47ZwvFrEhIjVm7L3bt0LqEyf8t0r\n56pVbQfEQWnU7uHGkkie2MKHZyWsRIvugYLl7/FBCYgGPCgaE8/acPT34iZDfk/j\n3946C9ktHnKxNvoQCopYG2u5FcWBFFN6FYlQNrq+jaWRV6HxUftearsn0D9TFPVh\nRsudEZ3SThVXAOjXhIFToPAq0CPvQHPAkjQ6E08lNHq7QbcwZ9N3k05ki59JSGl9\nyo/ZmF0d02IaBzybNlsF6vVExxR4+X5Lh2QsgQIDAQABAoIBAQDNPiuPS4aeR/mY\n8EiKR+HJZKLrcp11bVhQMR/THrpTm6LidA88n2y1XuA64+xDn7EMAI79XJ0fwRJh\nuT+MJoITqGMcGOXPngHkkW+QnvIa0nyBJOYbK24Y3U/Z1LVHAGrXJmlrrtZ6hLZW\ng7ha0uB1V1+CANITEB3Q/IBqfiVt4V95w1QtlsjDhs628IqjEVz6mC/0sjTKiNCO\nYQ6ta6CewiqkV+QZglE7u/7MkmNMDd4KVqEo6cqUEIkkKH6exUJvkahP1Z1o/uiY\n2Tjj6REnm0R+qddWo3Q+cpB2Jmbx+iwPiCz7VObUtsgcOPknoHnnoaAa4BgdG7aH\n4huynZppAoGBAPjxdIDygmtxcy7BSWqXlalAyam3oXffhQYKKxFFfxAVBtWIl+h3\nvzT4H3JhQgVUf01jBfH+dixisgImw1DxHnObfaJPgvQV78yYP7itb9rfxb7M9X/d\nduhuFKab4BaTjjRvYyuqeKeEa/tOvFt2+Y3eKPj1wF61ohmAfV/uz//bAoGBAO6c\nfsOORHQJbef5u2xkATmcn8CkV/OFYYIQluCZ3v/Qb0T10McVSrjlvMBA5gbjyahf\npKVvPDV9poT/axhAFdjM1KKtNe/I6GSCuq2de6Jm9ujR/ZZ3d2PQoMz0HXD8oMWH\nCOXEDR4Oniu3gczedGG8OwZ2yESF0eu4YVxGAFHTAoGAK1wrFbanvr0g+djSx80l\nVTiip3wDlNSK3/VvcO+w5QU0jobfJq+Mz1YUbCDClhkUn08LHw5aWPrL1JIZ3QRS\ncIJ5zIaa4ZbckL9IAgu7et0VHVmnvSC+8FcUI7zsuCH1V+660EU+BLeM81XQewHr\nD6nNayeq3RQ36sc1jzsSYZcCgYAy4Y4qdzDjqYsVN2ye/WhBd8OdGa5jkGKtkIoL\n1OP3muPPSbe+bCzl5p9sQ6qJd5Nt4w9B88lcArI6lBirMCc4dt0030isHCRqInJa\nSUWu6NPn67dumYUM9NUFP1zz1fsWg+gCzt6ZNTbHTbdRD3Kz0KaphzTHX93WrRed\nzJOO3wKBgQDHdlxjgCU7/TZxhfIL8Slyd4IdqZuM4DXEGkmROJzjmmOPv/tyOV3j\nn4d67go/PJSF/OYWmwYpiyYy3ksYtzhTUe6V2f5Q90RfzxcfBEE/ZW+q1LMO9NDE\nv6OXBY1k5Ckw6Oiz/wZdbW4d9/TLzl7//mtAmwEthfkL1lxvIvqb3A==\n-----END RSA PRIVATE KEY-----",
+                "user": null,
+                "password": null
+            },
+            "symlink_before_migrate":
+            {
+                "config/opsworks.php": "opsworks.php"
+            },
+            "symlinks":
+            {},
+            "database":
+            {},
+            "memcached":
+            {
+                "host": null,
+                "port": 11211
+            }
+        },
+        "municipal_debt":
+        {
+            "application": "municipal_debt",
+            "application_type": "php",
+            "environment":
+            {},
+            "environment_variables":
+            {},
+            "auto_bundle_on_deploy": true,
+            "deploy_to": "/srv/www/municipal_debt",
+            "deploying_user": null,
+            "document_root": null,
+            "domains": [
+                "mun-debt.pensiontracker.org",
+                "municipal_debt"
+            ],
+            "migrate": false,
+            "mounted_at": null,
+            "rails_env": null,
+            "restart_command": "echo 'restarting app'",
+            "sleep_before_restart": 0,
+            "ssl_support": false,
+            "ssl_certificate": null,
+            "ssl_certificate_key": null,
+            "ssl_certificate_ca": null,
+            "scm":
+            {
+                "scm_type": "git",
+                "repository": "git@bitbucket.org:josephnation/municipal-debt.git",
+                "revision": "staging",
+                "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA6Aiot+GkvIrpXgJJBJXz3si9FEJHzjv+5Njz/4jKOzgst7RD\nTdT1PLOZoB5qCW67T5x+FCK0JGp0Xf16yC5X47ZwvFrEhIjVm7L3bt0LqEyf8t0r\n56pVbQfEQWnU7uHGkkie2MKHZyWsRIvugYLl7/FBCYgGPCgaE8/acPT34iZDfk/j\n3946C9ktHnKxNvoQCopYG2u5FcWBFFN6FYlQNrq+jaWRV6HxUftearsn0D9TFPVh\nRsudEZ3SThVXAOjXhIFToPAq0CPvQHPAkjQ6E08lNHq7QbcwZ9N3k05ki59JSGl9\nyo/ZmF0d02IaBzybNlsF6vVExxR4+X5Lh2QsgQIDAQABAoIBAQDNPiuPS4aeR/mY\n8EiKR+HJZKLrcp11bVhQMR/THrpTm6LidA88n2y1XuA64+xDn7EMAI79XJ0fwRJh\nuT+MJoITqGMcGOXPngHkkW+QnvIa0nyBJOYbK24Y3U/Z1LVHAGrXJmlrrtZ6hLZW\ng7ha0uB1V1+CANITEB3Q/IBqfiVt4V95w1QtlsjDhs628IqjEVz6mC/0sjTKiNCO\nYQ6ta6CewiqkV+QZglE7u/7MkmNMDd4KVqEo6cqUEIkkKH6exUJvkahP1Z1o/uiY\n2Tjj6REnm0R+qddWo3Q+cpB2Jmbx+iwPiCz7VObUtsgcOPknoHnnoaAa4BgdG7aH\n4huynZppAoGBAPjxdIDygmtxcy7BSWqXlalAyam3oXffhQYKKxFFfxAVBtWIl+h3\nvzT4H3JhQgVUf01jBfH+dixisgImw1DxHnObfaJPgvQV78yYP7itb9rfxb7M9X/d\nduhuFKab4BaTjjRvYyuqeKeEa/tOvFt2+Y3eKPj1wF61ohmAfV/uz//bAoGBAO6c\nfsOORHQJbef5u2xkATmcn8CkV/OFYYIQluCZ3v/Qb0T10McVSrjlvMBA5gbjyahf\npKVvPDV9poT/axhAFdjM1KKtNe/I6GSCuq2de6Jm9ujR/ZZ3d2PQoMz0HXD8oMWH\nCOXEDR4Oniu3gczedGG8OwZ2yESF0eu4YVxGAFHTAoGAK1wrFbanvr0g+djSx80l\nVTiip3wDlNSK3/VvcO+w5QU0jobfJq+Mz1YUbCDClhkUn08LHw5aWPrL1JIZ3QRS\ncIJ5zIaa4ZbckL9IAgu7et0VHVmnvSC+8FcUI7zsuCH1V+660EU+BLeM81XQewHr\nD6nNayeq3RQ36sc1jzsSYZcCgYAy4Y4qdzDjqYsVN2ye/WhBd8OdGa5jkGKtkIoL\n1OP3muPPSbe+bCzl5p9sQ6qJd5Nt4w9B88lcArI6lBirMCc4dt0030isHCRqInJa\nSUWu6NPn67dumYUM9NUFP1zz1fsWg+gCzt6ZNTbHTbdRD3Kz0KaphzTHX93WrRed\nzJOO3wKBgQDHdlxjgCU7/TZxhfIL8Slyd4IdqZuM4DXEGkmROJzjmmOPv/tyOV3j\nn4d67go/PJSF/OYWmwYpiyYy3ksYtzhTUe6V2f5Q90RfzxcfBEE/ZW+q1LMO9NDE\nv6OXBY1k5Ckw6Oiz/wZdbW4d9/TLzl7//mtAmwEthfkL1lxvIvqb3A==\n-----END RSA PRIVATE KEY-----",
+                "user": null,
+                "password": null
+            },
+            "symlink_before_migrate":
+            {
+                "config/opsworks.php": "opsworks.php"
+            },
+            "symlinks":
+            {},
+            "database":
+            {},
+            "memcached":
+            {
+                "host": null,
+                "port": 11211
+            }
+        },
+        "us_pt":
+        {
+            "application": "us_pt",
+            "application_type": "php",
+            "environment":
+            {},
+            "environment_variables":
+            {},
+            "auto_bundle_on_deploy": true,
+            "deploy_to": "/srv/www/us_pt",
+            "deploying_user": null,
+            "document_root": null,
+            "domains": [
+                "qa-us.pensiontracker.org",
+                "us_pt"
+            ],
+            "migrate": false,
+            "mounted_at": null,
+            "rails_env": null,
+            "restart_command": "echo 'restarting app'",
+            "sleep_before_restart": 0,
+            "ssl_support": false,
+            "ssl_certificate": null,
+            "ssl_certificate_key": null,
+            "ssl_certificate_ca": null,
+            "scm":
+            {
+                "scm_type": "git",
+                "repository": "git@bitbucket.org:josephnation/pension_tracker_us.git",
+                "revision": "staging",
+                "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA6Aiot+GkvIrpXgJJBJXz3si9FEJHzjv+5Njz/4jKOzgst7RD\nTdT1PLOZoB5qCW67T5x+FCK0JGp0Xf16yC5X47ZwvFrEhIjVm7L3bt0LqEyf8t0r\n56pVbQfEQWnU7uHGkkie2MKHZyWsRIvugYLl7/FBCYgGPCgaE8/acPT34iZDfk/j\n3946C9ktHnKxNvoQCopYG2u5FcWBFFN6FYlQNrq+jaWRV6HxUftearsn0D9TFPVh\nRsudEZ3SThVXAOjXhIFToPAq0CPvQHPAkjQ6E08lNHq7QbcwZ9N3k05ki59JSGl9\nyo/ZmF0d02IaBzybNlsF6vVExxR4+X5Lh2QsgQIDAQABAoIBAQDNPiuPS4aeR/mY\n8EiKR+HJZKLrcp11bVhQMR/THrpTm6LidA88n2y1XuA64+xDn7EMAI79XJ0fwRJh\nuT+MJoITqGMcGOXPngHkkW+QnvIa0nyBJOYbK24Y3U/Z1LVHAGrXJmlrrtZ6hLZW\ng7ha0uB1V1+CANITEB3Q/IBqfiVt4V95w1QtlsjDhs628IqjEVz6mC/0sjTKiNCO\nYQ6ta6CewiqkV+QZglE7u/7MkmNMDd4KVqEo6cqUEIkkKH6exUJvkahP1Z1o/uiY\n2Tjj6REnm0R+qddWo3Q+cpB2Jmbx+iwPiCz7VObUtsgcOPknoHnnoaAa4BgdG7aH\n4huynZppAoGBAPjxdIDygmtxcy7BSWqXlalAyam3oXffhQYKKxFFfxAVBtWIl+h3\nvzT4H3JhQgVUf01jBfH+dixisgImw1DxHnObfaJPgvQV78yYP7itb9rfxb7M9X/d\nduhuFKab4BaTjjRvYyuqeKeEa/tOvFt2+Y3eKPj1wF61ohmAfV/uz//bAoGBAO6c\nfsOORHQJbef5u2xkATmcn8CkV/OFYYIQluCZ3v/Qb0T10McVSrjlvMBA5gbjyahf\npKVvPDV9poT/axhAFdjM1KKtNe/I6GSCuq2de6Jm9ujR/ZZ3d2PQoMz0HXD8oMWH\nCOXEDR4Oniu3gczedGG8OwZ2yESF0eu4YVxGAFHTAoGAK1wrFbanvr0g+djSx80l\nVTiip3wDlNSK3/VvcO+w5QU0jobfJq+Mz1YUbCDClhkUn08LHw5aWPrL1JIZ3QRS\ncIJ5zIaa4ZbckL9IAgu7et0VHVmnvSC+8FcUI7zsuCH1V+660EU+BLeM81XQewHr\nD6nNayeq3RQ36sc1jzsSYZcCgYAy4Y4qdzDjqYsVN2ye/WhBd8OdGa5jkGKtkIoL\n1OP3muPPSbe+bCzl5p9sQ6qJd5Nt4w9B88lcArI6lBirMCc4dt0030isHCRqInJa\nSUWu6NPn67dumYUM9NUFP1zz1fsWg+gCzt6ZNTbHTbdRD3Kz0KaphzTHX93WrRed\nzJOO3wKBgQDHdlxjgCU7/TZxhfIL8Slyd4IdqZuM4DXEGkmROJzjmmOPv/tyOV3j\nn4d67go/PJSF/OYWmwYpiyYy3ksYtzhTUe6V2f5Q90RfzxcfBEE/ZW+q1LMO9NDE\nv6OXBY1k5Ckw6Oiz/wZdbW4d9/TLzl7//mtAmwEthfkL1lxvIvqb3A==\n-----END RSA PRIVATE KEY-----",
+                "user": null,
+                "password": null
+            },
+            "symlink_before_migrate":
+            {
+                "config/opsworks.php": "opsworks.php"
+            },
+            "symlinks":
+            {},
+            "database":
+            {},
+            "memcached":
+            {
+                "host": null,
+                "port": 11211
+            }
+        },
+        "pf_demo":
+        {
+            "application": "pf_demo",
+            "application_type": "php",
+            "environment":
+            {},
+            "environment_variables":
+            {},
+            "auto_bundle_on_deploy": true,
+            "deploy_to": "/srv/www/pf_demo",
+            "deploying_user": null,
+            "document_root": null,
+            "domains": [
+                "pf-demo.pensiontracker.org",
+                "pf_demo"
+            ],
+            "migrate": false,
+            "mounted_at": null,
+            "rails_env": null,
+            "restart_command": "echo 'restarting app'",
+            "sleep_before_restart": 0,
+            "ssl_support": false,
+            "ssl_certificate": null,
+            "ssl_certificate_key": null,
+            "ssl_certificate_ca": null,
+            "scm":
+            {
+                "scm_type": "git",
+                "repository": "git@bitbucket.org:sonirajesh007/pt-forecaster.git",
+                "revision": "master",
+                "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA3/UjJBmdH2FIuejj6n4bI7ulnIGMZlXk7qMPEvKjb3BxDuAT\njHQG9xkPHEpy6Fcyr30HTV/iB2z0Iyh/EZaZtxphYEI3A4ckZaTZFUxJlKsA/lWQ\nBYy6VzI59g2pKQ6ekN1Z9cXbnpehz1O2Hcvk6w+zjL/vkVsb6BvTsB6LLhEcqGVz\ncsM8Tbsiw8qyW90v/xqF13lvGBpk36l0RMSAhTf7lxuXZ8zsUYNQ9V9JU36jEba2\nVWbzWuieT2AZXOguLz03mENfvyfL78BLN8HNaxxGsgXw+7eB4uNDRvrXUT80J8m6\ns1B+owoQb8HTRxDagbGfBK7q0wDVo+wsKTfUgwIDAQABAoIBAGUPFBVlLX6MgqnJ\nipc04oBEW53842MGXXDFybaOIOvXfFzvBkM51C7KcwQcIC/xsSB5NcNXggJBywTW\ncEh6gdCbKdeq6XJBGE55ja/LpeRdKeyapYurjiZstrTuQygQvcK277I03z54Q/7v\nUl2ttRXRFv9rWOpph3U8oVB25+0X2X4RLLK2+arEOpfhwdoDDRLIFfU2W+F/EbNm\npgs2H2328EVjyq+6onQJGvOPqiPSM6rZVexqpW8CckoVlH2YdWlX5o+zYSQtL0e1\nM1AaRDjgjtWUh8dLmdj0L1CfMYSw7R9V6tCaUC2W0QlkUw9J9phm23YI7PSXJH1L\nGpquFjkCgYEA9hthY3DlaT0RWbzCVsTQdcxr/zS6pEjjma9szoOuD4NZwfaNm8i0\nFg46Im+dXl60Xceh5WqmdBzHoT9hJCumqX/ZiaimhpZCryuR3bu1090YgjDWXBPN\n46hZN5q6jT8IfnRe+XCZOVhTVZlSYvHCUuPp+MFeodhtK9KCPyRU0CUCgYEA6PXS\n032HL7xSyuM+UzH31Gcc8UF8e3b8qc4CEJX8O4bCmZur+idtGSMzKxJIUmgIIEg/\nAFtlBk4Z6d3HyxXgLx3sDjNBZKwmvgnn2cZ6uU378c/RmmVKahF0etVOAj15q3U4\nKi6dQnh9WU1zdc65J0ZEVusBPgPhujWx2GasfYcCgYAT7svIfhBWobeSCRPEa1Rm\n9hOZK/Ah9jVY8Thi0Y97eiv+5bU6dNsBHk3fFCMuzYTWQ6D9L9IjfWE90iBQCakJ\n+WzpFVvHcswb2++IgfeMHVAq20HBW2lFkxEGy+VoIz7Q3yQCF/iRCHJXcH+Xu/T9\nObBtkVvUx+6vqfEapBqqcQKBgEUETymJDvv9dynUmSpcq2eqBNEU7aRGZCSKe+Ie\nDVQ1YIHRtOmvtIq1+vrPt81yNLYbsU6RxSRRDyxSIFbybDCJVN4AIWeJ+RBkLuQ+\nAS3VBMdnIlnzmFBES5X4i9vuCpXZbIJSvRRsTfafE43baM9R6f02MnAFBmL8dWv/\nPysRAoGBALq3W6cG75V3VPah0Y1ZbD5A3c/W4TUli8VL5iH1xqyHdkYubTGhH0K7\n7N0PlqLkl1bNvHh+xeu1wUmjP3mqw3dKn45WwjpCENjvtnWvv0/5n+/mAfTiv0fX\nbkioCPQKBwffZBaWV/z+DcvsoBuh85SC2M53K0sWBl2pSDBmZzjf\n-----END RSA PRIVATE KEY-----",
+                "user": null,
+                "password": null
+            },
+            "symlink_before_migrate":
+            {
+                "config/opsworks.php": "opsworks.php"
+            },
+            "symlinks":
+            {},
+            "database":
+            {},
+            "memcached":
+            {
+                "host": null,
+                "port": 11211
+            }
+        },
+        "pension_tracker_texas":
+        {
+            "application": "pension_tracker_texas",
+            "application_type": "php",
+            "environment":
+            {},
+            "environment_variables":
+            {},
+            "auto_bundle_on_deploy": true,
+            "deploy_to": "/srv/www/pension_tracker_texas",
+            "deploying_user": null,
+            "document_root": null,
+            "domains": [
+                "qa-tx.pensiontracker.org",
+                "pension_tracker_texas"
+            ],
+            "migrate": false,
+            "mounted_at": null,
+            "rails_env": null,
+            "restart_command": "echo 'restarting app'",
+            "sleep_before_restart": 0,
+            "ssl_support": false,
+            "ssl_certificate": null,
+            "ssl_certificate_key": null,
+            "ssl_certificate_ca": null,
+            "scm":
+            {
+                "scm_type": "git",
+                "repository": "josephnation@bitbucket.org:joe-team/pension-tracker-texas.git",
+                "revision": "staging",
+                "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA6Aiot+GkvIrpXgJJBJXz3si9FEJHzjv+5Njz/4jKOzgst7RD\nTdT1PLOZoB5qCW67T5x+FCK0JGp0Xf16yC5X47ZwvFrEhIjVm7L3bt0LqEyf8t0r\n56pVbQfEQWnU7uHGkkie2MKHZyWsRIvugYLl7/FBCYgGPCgaE8/acPT34iZDfk/j\n3946C9ktHnKxNvoQCopYG2u5FcWBFFN6FYlQNrq+jaWRV6HxUftearsn0D9TFPVh\nRsudEZ3SThVXAOjXhIFToPAq0CPvQHPAkjQ6E08lNHq7QbcwZ9N3k05ki59JSGl9\nyo/ZmF0d02IaBzybNlsF6vVExxR4+X5Lh2QsgQIDAQABAoIBAQDNPiuPS4aeR/mY\n8EiKR+HJZKLrcp11bVhQMR/THrpTm6LidA88n2y1XuA64+xDn7EMAI79XJ0fwRJh\nuT+MJoITqGMcGOXPngHkkW+QnvIa0nyBJOYbK24Y3U/Z1LVHAGrXJmlrrtZ6hLZW\ng7ha0uB1V1+CANITEB3Q/IBqfiVt4V95w1QtlsjDhs628IqjEVz6mC/0sjTKiNCO\nYQ6ta6CewiqkV+QZglE7u/7MkmNMDd4KVqEo6cqUEIkkKH6exUJvkahP1Z1o/uiY\n2Tjj6REnm0R+qddWo3Q+cpB2Jmbx+iwPiCz7VObUtsgcOPknoHnnoaAa4BgdG7aH\n4huynZppAoGBAPjxdIDygmtxcy7BSWqXlalAyam3oXffhQYKKxFFfxAVBtWIl+h3\nvzT4H3JhQgVUf01jBfH+dixisgImw1DxHnObfaJPgvQV78yYP7itb9rfxb7M9X/d\nduhuFKab4BaTjjRvYyuqeKeEa/tOvFt2+Y3eKPj1wF61ohmAfV/uz//bAoGBAO6c\nfsOORHQJbef5u2xkATmcn8CkV/OFYYIQluCZ3v/Qb0T10McVSrjlvMBA5gbjyahf\npKVvPDV9poT/axhAFdjM1KKtNe/I6GSCuq2de6Jm9ujR/ZZ3d2PQoMz0HXD8oMWH\nCOXEDR4Oniu3gczedGG8OwZ2yESF0eu4YVxGAFHTAoGAK1wrFbanvr0g+djSx80l\nVTiip3wDlNSK3/VvcO+w5QU0jobfJq+Mz1YUbCDClhkUn08LHw5aWPrL1JIZ3QRS\ncIJ5zIaa4ZbckL9IAgu7et0VHVmnvSC+8FcUI7zsuCH1V+660EU+BLeM81XQewHr\nD6nNayeq3RQ36sc1jzsSYZcCgYAy4Y4qdzDjqYsVN2ye/WhBd8OdGa5jkGKtkIoL\n1OP3muPPSbe+bCzl5p9sQ6qJd5Nt4w9B88lcArI6lBirMCc4dt0030isHCRqInJa\nSUWu6NPn67dumYUM9NUFP1zz1fsWg+gCzt6ZNTbHTbdRD3Kz0KaphzTHX93WrRed\nzJOO3wKBgQDHdlxjgCU7/TZxhfIL8Slyd4IdqZuM4DXEGkmROJzjmmOPv/tyOV3j\nn4d67go/PJSF/OYWmwYpiyYy3ksYtzhTUe6V2f5Q90RfzxcfBEE/ZW+q1LMO9NDE\nv6OXBY1k5Ckw6Oiz/wZdbW4d9/TLzl7//mtAmwEthfkL1lxvIvqb3A==\n-----END RSA PRIVATE KEY-----",
+                "user": null,
+                "password": null
+            },
+            "symlink_before_migrate":
+            {
+                "config/opsworks.php": "opsworks.php"
+            },
+            "symlinks":
+            {},
+            "database":
+            {},
+            "memcached":
+            {
+                "host": null,
+                "port": 11211
+            }
+        }
+    },
+    "opsworks_custom_cookbooks":
+    {
+        "enabled": true,
+        "scm":
+        {
+            "type": "git",
+            "repository": "https://github.com/technova/custom_recipes.git",
+            "user": null,
+            "password": null,
+            "revision": null,
+            "ssh_key": null
+        },
+        "manage_berkshelf": true,
+        "berkshelf_version": "3.1.3",
+        "recipes": [
+            "opsworks_ganglia::configure-client",
+            "ssh_users",
+            "mysql::client",
+            "agent_version",
+            "opsworks_stack_state_sync",
+            "php::configure",
+            "test_suite",
+            "opsworks_cleanup"
+        ]
+    },
+    "chef_environment": "_default",
+    "recipes": [
+        "opsworks_custom_cookbooks::load",
+        "opsworks_custom_cookbooks::execute"
+    ],
+    "opsworks_commons":
+    {
+        "assets_url": "https://opsworks-instance-assets-us-east-1.s3.amazonaws.com"
+    },
+    "opsworks_bundler":
+    {
+        "version": "1.5.3",
+        "manage_package": null
+    },
+    "opsworks_rubygems":
+    {
+        "version": "2.2.2"
+    }
+}

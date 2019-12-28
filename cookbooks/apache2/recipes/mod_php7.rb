@@ -19,7 +19,7 @@
 
 case node[:platform_family]
 when 'debian'
-  package 'libapache2-mod-php7' do
+  package 'libapache2-mod-php7.2' do
     action :install
     retries 3
     retry_delay 5
@@ -45,7 +45,7 @@ when 'rhel'
   end
 end
 
-apache_module 'php7' do
+apache_module 'php7.2' do
   if platform_family?('rhel')
     filename 'libphp7.so'
   end

@@ -1,5 +1,15 @@
 # setup Apache virtual host
-node[:deploy].each do |application, deploy|
+# node[:deploy].each do |application, deploy|
+search("aws_opsworks_app").each do |deploy|
+  # deploy[:shortname]
+  deploy[:application_type]="php"
+  application=deploy[:application]=deploy[:shortname]
+  deploy[:group]='www-data'
+  deploy[:user]='deploy'
+  deploy[:home]='/home/deploy'
+  deploy[:shell]='/bin/bash'
+  deploy[:deploy_to]="/srv/www/#{deploy[:shortname]}"
+  deploy[:absolute_document_root]="/srv/www/#{deploy[:shortname]}/current"
   include_recipe 'apache2::service'
   if deploy[:application_type] != 'php'
     Chef::Log.debug("Skipping mod_php7_apache2::php application #{application} as it is not an PHP app")

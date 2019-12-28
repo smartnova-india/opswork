@@ -43,7 +43,7 @@ define :opsworks_deploy do
     end
   end
 
-  deploy = node[:deploy][application]
+  # deploy = node[:deploy][application]
 
   directory "#{deploy[:deploy_to]}/shared/cached-copy" do
     recursive true
@@ -63,7 +63,7 @@ define :opsworks_deploy do
   if deploy[:scm] && deploy[:scm][:scm_type] != 'other'
     Chef::Log.debug("Checking out source code of application #{application} with type #{deploy[:application_type]}")
     deploy deploy[:deploy_to] do
-      provider Chef::Provider::Deploy.const_get(deploy[:chef_provider])
+      provider Chef::Provider::Deploy.const_get(deploy[:chef_provider]||"Timestamped")
       keep_releases deploy[:keep_releases]
       repository deploy[:scm][:repository]
       user deploy[:user]
@@ -130,22 +130,23 @@ define :opsworks_deploy do
         elsif deploy[:application_type] == 'aws-flow-ruby'
           OpsWorks::RailsConfiguration.bundle(application, node[:deploy][application], release_path)
         elsif deploy[:application_type] == 'php'
-          template "#{node[:deploy][application][:deploy_to]}/shared/config/opsworks.php" do
-            cookbook 'php'
-            source 'opsworks.php.erb'
-            mode '0660'
-            owner node[:deploy][application][:user]
-            group node[:deploy][application][:group]
-            variables(
-              :database => node[:deploy][application][:database],
-              :memcached => node[:deploy][application][:memcached],
-              :layers => node[:opsworks][:layers],
-              :stack_name => node[:opsworks][:stack][:name]
-            )
-            only_if do
-              File.exists?("#{node[:deploy][application][:deploy_to]}/shared/config")
-            end
-          end
+          Chef::Log.debug("Skipping of shared/config/opsworks.php for application #{application} with type #{deploy[:application_type]}")
+          # template "#{node[:deploy][application][:deploy_to]}/shared/config/opsworks.php" do
+          #   cookbook 'php'
+          #   source 'opsworks.php.erb'
+          #   mode '0660'
+          #   owner node[:deploy][application][:user]
+          #   group node[:deploy][application][:group]
+          #   variables(
+          #     :database => node[:deploy][application][:database],
+          #     :memcached => node[:deploy][application][:memcached],
+          #     :layers => node[:opsworks][:layers],
+          #     :stack_name => node[:opsworks][:stack][:name]
+          #   )
+          #   only_if do
+          #     File.exists?("#{node[:deploy][application][:deploy_to]}/shared/config")
+          #   end
+          # end
         elsif deploy[:application_type] == 'nodejs'
           if deploy[:auto_npm_install_on_deploy]
             OpsWorks::NodejsConfiguration.npm_install(application, node[:deploy][application], release_path, node[:opsworks_nodejs][:npm_install_options])

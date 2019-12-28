@@ -27,6 +27,10 @@ when 'centos','redhat','fedora','amazon'
   Chef::Log.debug("NODE: #{node.inspect}")
 when 'debian','ubuntu'		
   Chef::Log.info("NODE1: #{Chef::JSONCompat.to_json_pretty(node.to_hash)}")
+  search("aws_opsworks_app").each do |app|
+    Chef::Log.info("********** The app's short name is '#{app['shortname']}' **********")
+    Chef::Log.info("App: #{Chef::JSONCompat.to_json_pretty(app.to_hash)}")
+  end
   # Chef::Log.debug("NODE2: #{Chef::JSONCompat.to_json_pretty(node.to_hash)}")
   # Chef::Log.info("NODE3: #{node.to_yaml}")
 end

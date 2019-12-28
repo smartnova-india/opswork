@@ -21,6 +21,8 @@ DEPENDENCIES
   mysql (~> 8.6.0)
   nginx
     path: nginx
+  opstest
+    path: opstest
   opsworks_agent_monit
     path: opsworks_agent_monit
   opsworks_aws_flow_ruby
@@ -116,6 +118,7 @@ GRAPH
     deploy (>= 0.0.0)
   mysql (8.6.0)
   nginx (1.0.0)
+  opstest (0.1.0)
   opsworks_agent_monit (1.0.0)
     opsworks_initial_setup (>= 0.0.0)
   opsworks_aws_flow_ruby (1.0.0)

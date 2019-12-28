@@ -44,7 +44,7 @@ when "debian"
   default[:ganglia][:gmetad_package_name] = "gmetad"
   default[:ganglia][:web_frontend_package_name] = "ganglia-webfrontend"
 
-  default[:ganglia][:web_frontend_dependencies] = ["apache2","libapache2-mod-php7","rrdtool","libgd2-noxpm","libgd2-xpm","php7-gd"]
+  default[:ganglia][:web_frontend_dependencies] = ["apache2","libapache2-mod-php7.2","rrdtool","libgd2-noxpm","libgd2-xpm","php7.2-gd"]
 
 when "rhel"
   default[:ganglia][:gmetad_package_name] = "ganglia-gmetad"
