@@ -4,6 +4,8 @@ DEPENDENCIES
   apache2
     path: apache2
   build-essential
+  custom_package
+    path: custom_package
   dependencies
     path: dependencies
   deploy
@@ -84,6 +86,8 @@ GRAPH
   build-essential (8.2.1)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
+  custom_package (0.1.0)
+    mysql (>= 0.0.0)
   dependencies (1.0.0)
     gem_support (>= 0.0.0)
     opsworks_nodejs (>= 0.0.0)

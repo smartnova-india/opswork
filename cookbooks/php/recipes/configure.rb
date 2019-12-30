@@ -22,8 +22,8 @@ search("aws_opsworks_app").each do |deploy|
     variables(
       :database => deploy[:database],
       :memcached => deploy[:memcached],
-      :layers => node[:opsworks][:layers],
-      :stack_name => node[:opsworks][:stack][:name]
+      :layers => search("aws_opsworks_layer"),
+      :stack_name => stack[:name]
     )
     only_if do
       File.exists?("#{deploy[:deploy_to]}/shared/config")

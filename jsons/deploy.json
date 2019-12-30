@@ -1,0 +1,222 @@
+{
+  "aws_opsworks_agent": {
+    "version": "4037-20190604080613",
+    "valid_client_activities": [
+      "reboot",
+      "stop",
+      "deploy",
+      "grant_remote_access",
+      "revoke_remote_access",
+      "update_agent",
+      "setup",
+      "configure",
+      "update_dependencies",
+      "install_dependencies",
+      "update_custom_cookbooks",
+      "execute_recipes",
+      "sync_remote_users"
+    ],
+    "command": {
+      "type": "deploy",
+      "args": {
+        "app_ids": [
+          "3af6b59f-e3e2-4b22-8f50-44459265795c"
+        ]
+      },
+      "sent_at": "2019-12-29T05:36:13+00:00",
+      "command_id": "004811fb-c119-4a10-a28a-788ce2e03c53",
+      "iam_user_arn": "arn:aws:iam::805621391613:user/rajesh",
+      "instance_id": "356bf405-8418-47a9-9554-29e6ecb34497"
+    },
+    "resources": {
+      "command": {
+        "type": "deploy",
+        "args": {
+          "app_ids": [
+            "3af6b59f-e3e2-4b22-8f50-44459265795c"
+          ]
+        },
+        "sent_at": "2019-12-29T05:36:13+00:00",
+        "command_id": "004811fb-c119-4a10-a28a-788ce2e03c53",
+        "iam_user_arn": "arn:aws:iam::805621391613:user/rajesh",
+        "instance_id": "356bf405-8418-47a9-9554-29e6ecb34497"
+      },
+      "apps": [
+        {
+          "app_id": "3af6b59f-e3e2-4b22-8f50-44459265795c",
+          "app_source": {
+            "password": null,
+            "revision": "feature/upgrade_php7",
+            "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA6Aiot+GkvIrpXgJJBJXz3si9FEJHzjv+5Njz/4jKOzgst7RD\nTdT1PLOZoB5qCW67T5x+FCK0JGp0Xf16yC5X47ZwvFrEhIjVm7L3bt0LqEyf8t0r\n56pVbQfEQWnU7uHGkkie2MKHZyWsRIvugYLl7/FBCYgGPCgaE8/acPT34iZDfk/j\n3946C9ktHnKxNvoQCopYG2u5FcWBFFN6FYlQNrq+jaWRV6HxUftearsn0D9TFPVh\nRsudEZ3SThVXAOjXhIFToPAq0CPvQHPAkjQ6E08lNHq7QbcwZ9N3k05ki59JSGl9\nyo/ZmF0d02IaBzybNlsF6vVExxR4+X5Lh2QsgQIDAQABAoIBAQDNPiuPS4aeR/mY\n8EiKR+HJZKLrcp11bVhQMR/THrpTm6LidA88n2y1XuA64+xDn7EMAI79XJ0fwRJh\nuT+MJoITqGMcGOXPngHkkW+QnvIa0nyBJOYbK24Y3U/Z1LVHAGrXJmlrrtZ6hLZW\ng7ha0uB1V1+CANITEB3Q/IBqfiVt4V95w1QtlsjDhs628IqjEVz6mC/0sjTKiNCO\nYQ6ta6CewiqkV+QZglE7u/7MkmNMDd4KVqEo6cqUEIkkKH6exUJvkahP1Z1o/uiY\n2Tjj6REnm0R+qddWo3Q+cpB2Jmbx+iwPiCz7VObUtsgcOPknoHnnoaAa4BgdG7aH\n4huynZppAoGBAPjxdIDygmtxcy7BSWqXlalAyam3oXffhQYKKxFFfxAVBtWIl+h3\nvzT4H3JhQgVUf01jBfH+dixisgImw1DxHnObfaJPgvQV78yYP7itb9rfxb7M9X/d\nduhuFKab4BaTjjRvYyuqeKeEa/tOvFt2+Y3eKPj1wF61ohmAfV/uz//bAoGBAO6c\nfsOORHQJbef5u2xkATmcn8CkV/OFYYIQluCZ3v/Qb0T10McVSrjlvMBA5gbjyahf\npKVvPDV9poT/axhAFdjM1KKtNe/I6GSCuq2de6Jm9ujR/ZZ3d2PQoMz0HXD8oMWH\nCOXEDR4Oniu3gczedGG8OwZ2yESF0eu4YVxGAFHTAoGAK1wrFbanvr0g+djSx80l\nVTiip3wDlNSK3/VvcO+w5QU0jobfJq+Mz1YUbCDClhkUn08LHw5aWPrL1JIZ3QRS\ncIJ5zIaa4ZbckL9IAgu7et0VHVmnvSC+8FcUI7zsuCH1V+660EU+BLeM81XQewHr\nD6nNayeq3RQ36sc1jzsSYZcCgYAy4Y4qdzDjqYsVN2ye/WhBd8OdGa5jkGKtkIoL\n1OP3muPPSbe+bCzl5p9sQ6qJd5Nt4w9B88lcArI6lBirMCc4dt0030isHCRqInJa\nSUWu6NPn67dumYUM9NUFP1zz1fsWg+gCzt6ZNTbHTbdRD3Kz0KaphzTHX93WrRed\nzJOO3wKBgQDHdlxjgCU7/TZxhfIL8Slyd4IdqZuM4DXEGkmROJzjmmOPv/tyOV3j\nn4d67go/PJSF/OYWmwYpiyYy3ksYtzhTUe6V2f5Q90RfzxcfBEE/ZW+q1LMO9NDE\nv6OXBY1k5Ckw6Oiz/wZdbW4d9/TLzl7//mtAmwEthfkL1lxvIvqb3A==\n-----END RSA PRIVATE KEY-----",
+            "type": "git",
+            "url": "git@bitbucket.org:josephnation/rand.git",
+            "user": null
+          },
+          "attributes": {
+            "auto_bundle_on_deploy": true,
+            "aws_flow_ruby_settings": {
+            },
+            "document_root": null,
+            "rails_env": null
+          },
+          "data_sources": [
+            {
+              "type": "None"
+            }
+          ],
+          "domains": [
+            "qa-php7.randstatestats.org",
+            "rand"
+          ],
+          "enable_ssl": false,
+          "environment": {
+          },
+          "name": "RAND",
+          "shortname": "rand",
+          "ssl_configuration": {
+            "certificate": null,
+            "private_key": null,
+            "chain": null
+          },
+          "type": "other"
+        },
+        {
+          "app_id": "93ffb7b0-a0cc-4dc8-90bd-bf0cd67e8198",
+          "app_source": {
+            "password": null,
+            "revision": "staging",
+            "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA6Aiot+GkvIrpXgJJBJXz3si9FEJHzjv+5Njz/4jKOzgst7RD\nTdT1PLOZoB5qCW67T5x+FCK0JGp0Xf16yC5X47ZwvFrEhIjVm7L3bt0LqEyf8t0r\n56pVbQfEQWnU7uHGkkie2MKHZyWsRIvugYLl7/FBCYgGPCgaE8/acPT34iZDfk/j\n3946C9ktHnKxNvoQCopYG2u5FcWBFFN6FYlQNrq+jaWRV6HxUftearsn0D9TFPVh\nRsudEZ3SThVXAOjXhIFToPAq0CPvQHPAkjQ6E08lNHq7QbcwZ9N3k05ki59JSGl9\nyo/ZmF0d02IaBzybNlsF6vVExxR4+X5Lh2QsgQIDAQABAoIBAQDNPiuPS4aeR/mY\n8EiKR+HJZKLrcp11bVhQMR/THrpTm6LidA88n2y1XuA64+xDn7EMAI79XJ0fwRJh\nuT+MJoITqGMcGOXPngHkkW+QnvIa0nyBJOYbK24Y3U/Z1LVHAGrXJmlrrtZ6hLZW\ng7ha0uB1V1+CANITEB3Q/IBqfiVt4V95w1QtlsjDhs628IqjEVz6mC/0sjTKiNCO\nYQ6ta6CewiqkV+QZglE7u/7MkmNMDd4KVqEo6cqUEIkkKH6exUJvkahP1Z1o/uiY\n2Tjj6REnm0R+qddWo3Q+cpB2Jmbx+iwPiCz7VObUtsgcOPknoHnnoaAa4BgdG7aH\n4huynZppAoGBAPjxdIDygmtxcy7BSWqXlalAyam3oXffhQYKKxFFfxAVBtWIl+h3\nvzT4H3JhQgVUf01jBfH+dixisgImw1DxHnObfaJPgvQV78yYP7itb9rfxb7M9X/d\nduhuFKab4BaTjjRvYyuqeKeEa/tOvFt2+Y3eKPj1wF61ohmAfV/uz//bAoGBAO6c\nfsOORHQJbef5u2xkATmcn8CkV/OFYYIQluCZ3v/Qb0T10McVSrjlvMBA5gbjyahf\npKVvPDV9poT/axhAFdjM1KKtNe/I6GSCuq2de6Jm9ujR/ZZ3d2PQoMz0HXD8oMWH\nCOXEDR4Oniu3gczedGG8OwZ2yESF0eu4YVxGAFHTAoGAK1wrFbanvr0g+djSx80l\nVTiip3wDlNSK3/VvcO+w5QU0jobfJq+Mz1YUbCDClhkUn08LHw5aWPrL1JIZ3QRS\ncIJ5zIaa4ZbckL9IAgu7et0VHVmnvSC+8FcUI7zsuCH1V+660EU+BLeM81XQewHr\nD6nNayeq3RQ36sc1jzsSYZcCgYAy4Y4qdzDjqYsVN2ye/WhBd8OdGa5jkGKtkIoL\n1OP3muPPSbe+bCzl5p9sQ6qJd5Nt4w9B88lcArI6lBirMCc4dt0030isHCRqInJa\nSUWu6NPn67dumYUM9NUFP1zz1fsWg+gCzt6ZNTbHTbdRD3Kz0KaphzTHX93WrRed\nzJOO3wKBgQDHdlxjgCU7/TZxhfIL8Slyd4IdqZuM4DXEGkmROJzjmmOPv/tyOV3j\nn4d67go/PJSF/OYWmwYpiyYy3ksYtzhTUe6V2f5Q90RfzxcfBEE/ZW+q1LMO9NDE\nv6OXBY1k5Ckw6Oiz/wZdbW4d9/TLzl7//mtAmwEthfkL1lxvIvqb3A==\n-----END RSA PRIVATE KEY-----",
+            "type": "git",
+            "url": "josephnation@bitbucket.org:joe-team/pension-tracker-texas.git",
+            "user": null
+          },
+          "attributes": {
+            "auto_bundle_on_deploy": true,
+            "aws_flow_ruby_settings": {
+            },
+            "document_root": null,
+            "rails_env": null
+          },
+          "data_sources": [
+            {
+              "type": "None"
+            }
+          ],
+          "domains": [
+            "qa-ca7.pensiontracker.org",
+            "pension_tracker"
+          ],
+          "enable_ssl": false,
+          "environment": {
+          },
+          "name": "Pension Tracker",
+          "shortname": "pension_tracker",
+          "ssl_configuration": {
+            "certificate": null,
+            "private_key": null,
+            "chain": null
+          },
+          "type": "other"
+        }
+      ],
+      "layers": [
+        {
+          "layer_id": "3b5b4242-0a55-4229-9e53-e997ccb4c4b3",
+          "name": "PHP7Server",
+          "packages": [
+
+          ],
+          "shortname": "php7server",
+          "type": "custom",
+          "volume_configurations": [
+
+          ],
+          "cloud_watch_logs_configuration": {
+            "enabled": false,
+            "log_streams": [
+              {
+                "file": "/var/lib/aws/opsworks/chef/*.log",
+                "log_group_name": "PHP7/php7server/opsworks-command-log"
+              }
+            ]
+          }
+        }
+      ],
+      "instances": [
+        {
+          "ami_id": "ami-095192256fe1477ad",
+          "architecture": "x86_64",
+          "auto_scaling_type": null,
+          "availability_zone": "us-east-1a",
+          "created_at": "2019-12-28T15:02:20+00:00",
+          "ebs_optimized": false,
+          "ec2_instance_id": "i-057ffad89663e793a",
+          "elastic_ip": "34.197.195.150",
+          "hostname": "leopard",
+          "instance_id": "356bf405-8418-47a9-9554-29e6ecb34497",
+          "instance_type": "t2.micro",
+          "layer_ids": [
+            "3b5b4242-0a55-4229-9e53-e997ccb4c4b3"
+          ],
+          "os": "Ubuntu 18.04 LTS",
+          "private_dns": "ip-172-31-42-129.ec2.internal",
+          "private_ip": "172.31.42.129",
+          "public_dns": "ec2-34-197-195-150.compute-1.amazonaws.com",
+          "public_ip": "34.197.195.150",
+          "root_device_type": "ebs",
+          "root_device_volume_id": "vol-038b4d3794394e9b9",
+          "ssh_host_dsa_key_fingerprint": "e3:a4:b3:f0:c1:98:12:04:07:5c:86:38:c1:3d:ba:a0",
+          "ssh_host_dsa_key_public": "ssh-dss AAAAB3NzaC1kc3MAAAEBAMX5gcG0eN+DC2/5vkRbG0p2RQcLU05Q6f2zJ+24FKsUpo5egdAS/9XUkagkgPAtiIfUHeX2cKu9zkEmBYLmQIjWsowD86aAaYH4H1vunnjct3xWwvVmZfgsS7NQOJkXlNlTALV4Kt74uX8faPh8MMZNeHDGoHSqyBLS9PB7D0XKTw8Bt5fYy0wFCHoZdegbNY2e/kE8FrIt8Wxp+ZC06GYaSauniMqZHnDM2NBt52JjGMA58VSHCQT3nAqYsxkRZd7F/2KJPKmDY1XqeB2JTEjHW5TEKHmX8gBzLNu3S+AomQ1N2AgpjuyZQ9MwZsXnATREAdFmQuUD6OsBIE+gJzEAAAAhAJzbHMKaUDGEse4Cx/gxaauhGo3AfXDNzL+5fTru4VwDAAABAAtCT6+vmV7t8QwTpg/pMAMNQrXrBpw2F1Oo72gk/0VfyyvFAXFYnEl4N6y0LXTmmY4EiYwPWohNToG/WNYX2YBbHACwnhg7RzOTuG8BCDMBa+Q4cjhxfRLXKNqNv/vPNBlNWhKKgwY6gwqiWqbGcJl8iqcH8UaV2cjVoJQ5jjuGM90pPZB12ZU2cGuHL9QlWCvltBGM/rbn2/V7xIVlLNnanXFE6yH8AAbxAv5coayG44Xmuhhc+OPYV0/c04vWsCQBsNQoFOGH14U84hNX0b0Rf3n+/SMyANQ4+UQr8ceKP+XQ7o4vmWSVK2wV2QveInHjJoxDJ2UClDY28nziaaIAAAEAbUzzZBcd1iwKVWnOa9L7yt4IwwGgmKGbo4ig6vx8EEHJpL2IMF1U1Fh6sy+WC+JNZeMetBXGo+eW4cfLqpLWrmLM2+t2suGXVjm8olDEvK5AC4E+mqLWwVQWlYxwXji9Zc82JjQKN8G3bPZ6p9/ZkvIrdyu4thx9AmC9EPoBVtrxqZLDYJqEixdNecGsU1e12Abp7+2vwo4P1ors6bq1nlF1hVQNLp/Fupt83EcPBYeEWvZ1A7r39vTojRXvESJQZ4KEcpLZMdYljXp/r2Yqdg23jHkGJNR8lAmsTKA7lrmlJt0MMcYxpJGOhVYlsLlspE+Q0ryd2nWcipJDq2RvaQ==",
+          "ssh_host_rsa_key_fingerprint": "41:40:01:40:56:48:29:5a:21:73:a7:1e:35:62:ec:03",
+          "ssh_host_rsa_key_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVTqOKnmudrZNaW5QxJpqaTy54MiIFHTdAHp9EQOvCC/to9urpiiy4p/vPXc0hRhZDpLphKdATlGjL7yxQWz7XH+Bz5yCa4NkgNeS6kmdRy9lBLjplfsbXaMh0vBlssaWAQEQmHQkeBSD2USGixZuNkmyvpSRxsg+aYHT/w+w668YQEJdpCYpHeteip2hykwSqjN530u9c7ENil8WXW2dAW/JNSee1INZLC1DCkV31e6566gMENAQIoe0qXHiRtevMTmUVA9MhTEomp3Q6LA+KJkyOB0LuWVxcHuqmt2PBFTPGGFY7wUSDpSDuutaY22zZEqkRxGDuVFvzQCVRY0rb",
+          "status": "online",
+          "subnet_id": "subnet-c78e9aef",
+          "virtualization_type": "hvm",
+          "infrastructure_class": "ec2",
+          "ssh_host_dsa_key_private": "-----BEGIN DSA PRIVATE KEY-----\nMIIDVQIBAAKCAQEAxfmBwbR434MLb/m+RFsbSnZFBwtTTlDp/bMn7bgUqxSmjl6B\n0BL/1dSRqCSA8C2Ih9Qd5fZwq73OQSYFguZAiNayjAPzpoBpgfgfW+6eeNy3fFbC\n9WZl+CxLs1A4mReU2VMAtXgq3vi5fx9o+Hwwxk14cMagdKrIEtL08HsPRcpPDwG3\nl9jLTAUIehl16Bs1jZ7+QTwWsi3xbGn5kLToZhpJq6eIypkecMzY0G3nYmMYwDnx\nVIcJBPecCpizGRFl3sX/Yok8qYNjVep4HYlMSMdblMQoeZfyAHMs27dL4CiZDU3Y\nCCmO7JlD0zBmxecBNEQB0WZC5QPo6wEgT6AnMQIhAJzbHMKaUDGEse4Cx/gxaauh\nGo3AfXDNzL+5fTru4VwDAoIBAAtCT6+vmV7t8QwTpg/pMAMNQrXrBpw2F1Oo72gk\n/0VfyyvFAXFYnEl4N6y0LXTmmY4EiYwPWohNToG/WNYX2YBbHACwnhg7RzOTuG8B\nCDMBa+Q4cjhxfRLXKNqNv/vPNBlNWhKKgwY6gwqiWqbGcJl8iqcH8UaV2cjVoJQ5\njjuGM90pPZB12ZU2cGuHL9QlWCvltBGM/rbn2/V7xIVlLNnanXFE6yH8AAbxAv5c\noayG44Xmuhhc+OPYV0/c04vWsCQBsNQoFOGH14U84hNX0b0Rf3n+/SMyANQ4+UQr\n8ceKP+XQ7o4vmWSVK2wV2QveInHjJoxDJ2UClDY28nziaaICggEAbUzzZBcd1iwK\nVWnOa9L7yt4IwwGgmKGbo4ig6vx8EEHJpL2IMF1U1Fh6sy+WC+JNZeMetBXGo+eW\n4cfLqpLWrmLM2+t2suGXVjm8olDEvK5AC4E+mqLWwVQWlYxwXji9Zc82JjQKN8G3\nbPZ6p9/ZkvIrdyu4thx9AmC9EPoBVtrxqZLDYJqEixdNecGsU1e12Abp7+2vwo4P\n1ors6bq1nlF1hVQNLp/Fupt83EcPBYeEWvZ1A7r39vTojRXvESJQZ4KEcpLZMdYl\njXp/r2Yqdg23jHkGJNR8lAmsTKA7lrmlJt0MMcYxpJGOhVYlsLlspE+Q0ryd2nWc\nipJDq2RvaQIgf/FYoHfaIvHb6sLWxyl47L9ibFGOwreKQWId+m5gtuM=\n-----END DSA PRIVATE KEY-----\n",
+          "ssh_host_rsa_key_private": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpQIBAAKCAQEA1U6jip5rna2TWluUMSaamk8ueDIiBR03QB6fREDrwgv7aPbq\n6YosuKf7z13NIUYWQ6S6YSnQE5Roy+8sUFs+1x/gc+cgmuDZIDXkupJnUcvZQS46\nZX7G12jIdLwZbLGlgEBEJh0JHgUg9lEhosWbjZJsr6UkcbIPmmB0/8PsOuvGEBCX\naQmKR3rXoqdocpMEqozed9LvXOxDYpfFl1tnQFvyTUnntSDWSwtQwpFd9XuueuoD\nBDQECKHtKlx4kbXrzE5lFQPTIUxKJqd0OiwPiiZMjgdC7llcXB7qprdjwRUzxhhW\nO8FEg6Ug7rrWmNts2RKpEcRg7lRb80AlUWNK2wIDAQABAoIBAQDCM6V7p/4MgaJ9\nipEiKqZpRRvmvKXyiAXsb7TLPFwowCX2C5AWbgGHYRFGW31OBPRyQ4CYw6u4l87N\nlQSAaIKO82uzukMaHwovZEHJh09fzjsPN9pc246HQdP3S+XN6vLmEBy7ooXRehPn\njjgUbNrRivU++Rh0FwxTnewHjEX/4U0YhgkrPFn1KoHSzq+u1VX0TMqqfzzGpmhp\nAZuWU73n1uWp+BZd6wTf3Bk3EdvvtJfdAiHDFpgvR1cNt7fPwLgkqhQ2vfBWPhZt\nqF6Y1/sE/focvzy6rF49+K0Z06XzJk78ubD024YsvEdxVDZfCwUV+OGrkV82uqCX\nz4Am9QQBAoGBAPJfHCiiIKKndsoMf/1RFS7e6f36eOPenQl6doxaL0Fxefa9ys4P\nVM+tejps4aCtdTmoZlQtMEf+HtuGzxrgaHU+C3dGdC5KKhpKBWT0h9yiDqvtKUEy\nIZxbBNa+OoCTrRp+JQZ72rmB8VBhXslic9+I1XvytS4BZhajRcv3KpDbAoGBAOFN\nJ0a2GgwOvhWASZpYZqisjp4PFjuSryXuzA8wMT1PExOSFJZteExMNN4MFT9vVRKX\n8NeiARLBqEvEGuTMORrwgP3BXxwTh17odV5ylxvz4e6BjKymsA9IRc5XFae4hR+N\nuCN7fbjgAvklZgG+M2V58348NW2Tb7NDPBv/Ik4BAoGABcEkVgKja7k2JM3vLACE\n1DwOqi0MObzLVbJGpkZt4Mvk7WrMKeBLTzL7N+/l237Czb+lzlHUV6E88lFdEXJK\niJ4Uf5x4nbC9FyqyvhbgMujWGFblJ9sc2S2AC+kwUmUvMvXTwzellcn0BMiLC5T+\n00vYZbz5eEIoPllaCuGvbQkCgYEAvkYeiYV5cf1xY0842fUWnhU9TReIuz8iVHLc\nO2eD7jc98SVJ5dEF68ngTDcAKtanjlBrwnC7X0/WBkbUP66J+8pp5eTNojSL+wdv\nOBimraDGils2pwkPX5i1+5FoZIFdTEyv2qeMgfoOCMQg5g/v8B+SGGZY6PW/PDHo\nLezG2AECgYEAm9Eq7IoSogtDVmMYsFUOjdKhGXQ7bOgvlKnASUGxQiumfZ2tas/b\nKinBgTiLHoAXPMV8IJgoDPDNJqxHHyPr3nm0JXcAYp24q980D39Fxsgl/WDYrzNq\nm3o4voz++sEvNR5TO8sD7FfotiWm/xiWBKdVK0w6aI/F6Jpx/w27o78=\n-----END RSA PRIVATE KEY-----\n"
+        }
+      ],
+      "users": [
+
+      ],
+      "elastic_load_balancers": [
+
+      ],
+      "rds_db_instances": [
+
+      ],
+      "stack": {
+        "arn": "arn:aws:opsworks:us-east-1:805621391613:stack/ab741a66-7d6e-4d29-8f90-e3b83a2ac6e9/",
+        "custom_cookbooks_source": {
+          "type": "s3",
+          "url": "https://s3.amazonaws.com/opswork-recipe/cookbooks.tar.gz",
+          "username": "AKIA3XEWG4D64RDGSKSG",
+          "password": "k3gdbOVieV+hGRfSTjjnOUInawfd82h2nP2X450Z",
+          "ssh_key": null,
+          "revision": null
+        },
+        "name": "PHP7",
+        "region": "us-east-1",
+        "stack_id": "ab741a66-7d6e-4d29-8f90-e3b83a2ac6e9",
+        "use_custom_cookbooks": true,
+        "vpc_id": "vpc-92f247f7",
+        "color": "rgb(184, 133, 46)"
+      },
+      "ecs_clusters": [
+
+      ],
+      "volumes": [
+
+      ]
+    },
+    "chef": {
+      "customer_recipes": [
+        "deploy::default",
+        "deploy::php"
+      ],
+      "customer_json": "e30=\n",
+      "customer_data_bags": "e30=\n"
+    }
+  }
+}

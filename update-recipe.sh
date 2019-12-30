@@ -4,7 +4,7 @@ export AWS_SECRET_ACCESS_KEY='s4rA8JgXooq/ov3EMGCm+N/R8Sxa/EPZdRxqMGrz'
 CHEF_REPO="/Users/rajesh/RajeshWork/Projects/AWS/smart-chef-repo"
 STACK_ID="ab741a66-7d6e-4d29-8f90-e3b83a2ac6e9"
 # INSTANCE_ID="3a8da223-fe9d-4602-a557-d0c19f50e265";
-INSTANCE_ID="1fe4d79d-0f5c-42ca-be1f-9fff88b28fb3";
+INSTANCE_ID="f91c1160-7b45-47e4-a9cc-7bc99a3ff933";
 # STACK_ID="3a8da223-fe9d-4602-a557-d0c19f50e265"
 cd $CHEF_REPO/cookbooks
 berks package $CHEF_REPO/cookbooks.tar.gz
